@@ -1,0 +1,431 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1.3px;
+    user-select: none;
+    scroll-behavior: smooth;
+    flex-wrap: wrap;
+}
+
+.sectionContainHeaderandSectionOne{
+    background-color: #736AFF;
+}
+
+/* body */
+body::-webkit-scrollbar{
+    width: 0px;
+}
+
+/* header */
+.header{
+    position: fixed;
+    width: 100%;
+    background: linear-gradient(to right, #efefef, #dfdfdf);
+    z-index: 100;
+    border-top: 2px solid #736AFF;
+}
+.header-navBar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+}
+.header-title{
+    font-size: 20px;
+    animation: slideFromLeftOne 0.5s ease-in-out;
+}
+@keyframes slideFromLeftOne {
+    0%{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.header-title span{
+    color: #5b28d3;
+}
+.header-nav-ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    animation: slideFromRight 0.5s ease-in-out;
+}
+@keyframes slideFromRight {
+    0%{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.header-nav-ul li{
+    padding: 0px 15px;
+}
+.header-nav-ul li a{
+    text-decoration: none;
+    color: rgba(0,0,0.4);
+    font-size: 13px;
+    text-transform: uppercase;
+}
+.header-nav-ul li a:hover{
+    color: #5b28d3;
+}
+
+/* section One */
+.sectionOneContainer{
+    background: linear-gradient(to right, #efefef, #dfdfdf);
+    width: 100%;
+    min-height: 100vh;
+    z-index: 99;
+    clip-path: polygon(0 0, 100% 0, 100% 76%, 31% 66%, 0 76%, 0% 50%);
+}
+.sectionOneMyself{
+    width: 50%;
+    min-height: 85vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 70px;
+    animation: slideFromLeftTwo 1.5s ease-in-out;
+}
+@keyframes slideFromLeftTwo {
+    0%{
+        opacity: 0;
+        transform: translateX(-1500px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.sectionOnetext{
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.sectionOneName{
+    text-transform: uppercase;
+    font-size: 32px;
+    line-height: 40px;
+    color: rgba(0,0,0,0.9);
+}
+.sectionOneName span{
+    color:#5b28d3;
+}
+.sectionOneCarrier span{
+    font-weight: 600;
+    font-size: 19px;
+    color: #5b28d3;
+}
+.sectionOneBtn{
+    position: relative;
+}
+.sectionOneBtn button{
+    position: absolute;
+    border: none;
+    outline: none;
+    background-color: #dfdfdf;
+    text-transform: uppercase;
+    border-left: 1px solid #736AFF;
+    cursor: pointer;
+    padding: 10px 0px;
+    transition: .5s;
+}
+.sectionOneBtn button a{
+    padding: 10px 27px;
+    text-decoration: none;
+    color: #000;
+}
+.sectionOneBtn button .user{
+    font-size: 15px;
+}
+.sectionOneBtn button a:hover{
+    background-color: #736AFF;
+    color: #ececec;
+    transition: .5s;
+}
+
+/* Section Two */
+#sectionAbout{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.sectionAboutHeader{
+    position: absolute;
+    top: 10%;
+    font-size: 25px;
+    border-bottom: 1px solid #736AFF;
+}
+.sectionAboutContainer{
+    margin: auto;
+    width: 90%;
+    line-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sectionAboutDetails label{
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.sectionAboutDetails span{
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+/* Section Education */
+
+#sectionEducations{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.sectionEducationsHeader{
+    position: absolute;
+    top: 10%;
+    font-size: 25px;
+    border-bottom: 1px solid #736AFF;
+}
+.sectionEducationsContainer{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sectionEducationInSchool{
+    width: 500px;
+    height: 150px;
+    background-color: #ececec;
+    padding: 0px 10px;
+    margin: 20px 10px;
+    box-shadow: 1px 1px 8px rgba(0,0,0,0.1);
+    box-shadow: inset .5px .5px 5px rgba(0,0,0,0.05);
+    transition: .5s;
+}
+.sectionEducationInSchool:hover{
+    transform: translateY(-10px);
+    transition: .5s;
+}
+.sectionEducationInSchool h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #736AFF;
+    width: 90%;
+    margin: auto;
+}
+.sectionEducationInSchoolTxt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.sectionEducationInSchoolTxt h4{
+    padding: 10px 0;
+    text-align: start;
+}
+
+@media (max-width: 1056px){
+    #sectionEducations{
+        min-height: 125vh;
+    }
+}
+
+/* Section Skills */
+
+#sectionSkills{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.sectionSkillsHeader{
+    position: absolute;
+    top: 10%;
+    font-size: 25px;
+    border-bottom: 1px solid #736AFF;
+}
+.sectionSkillsContainer{
+    width: 80%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 60px;
+}
+.SkillSets{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.SkillSets h3{
+    margin-left: 50px;
+}
+.skillSetsLevel{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.skillSetsLevel .rangeBar{
+    position: relative;
+    width: 50%;
+    background-color: #acacac;
+    height: 3px;
+}
+.rangeBar input{
+    position: absolute;
+    width: 80%;
+    -webkit-appearance: none;
+    height: 100%;
+    border-radius: 10%;
+    background-color: #5b28d3;
+}
+.skillSetsLevel input::-webkit-slider-thumb{
+    -webkit-appearance: none;
+}
+.rangeBar .sliderRange2{
+    width: 70%;
+}
+.rangeBar .sliderRange3,
+.rangeBar .sliderRange6{
+    width: 60%;
+}
+.rangeBar .sliderRange4{
+    width: 40%;
+}
+.rangeBar .sliderRange5{
+    width: 80%;
+}
+.rangeBar .sliderRange7{
+    width: 45%;
+}
+
+/* Section Contact */
+
+#sectionContact{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #262626;
+}
+.sectionContactContainer{
+    margin-top: 50px;
+    width: 70%;
+    height: 500px;
+    background-color: #3D3D3D;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+}
+.contactInfo{
+    width: 300px;
+    height: 350px;
+    background-color: #736AFF;
+    transform: translateX(-50%);
+    padding: 10px 15px;
+    overflow: hidden;
+}
+.contactInfo h2{
+    color: white;
+}
+.contactInfo h2 span{
+    color: rgb(241, 205, 86);
+}
+.contactDetails{
+    display: flex;
+    padding: 30px 0;
+}
+.contactDetails label{
+    font-size: 13px;
+    line-height: 40px;
+    color: white;
+}
+.contactDetails label i{
+    color: black;
+    font-size: 17px;
+    padding-right: 10px;
+}
+.contactDetails .add{
+    line-height: 30px;
+}
+
+.contactMsg{
+    line-height: 50px;
+    width: 450px;
+}
+.contactMsg .contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contactMsg .contact h3{
+    color: #ececec;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.contactMsg .contact input{
+    padding: 5px 8px;
+    width: 300px;
+    outline: none;
+    font-weight: 500;
+    font-size: 13px;
+}
+.contactMsg .contact input:placeholder-shown{
+    font-size: 12px;
+}
+.contactMsg .contact textarea:placeholder-shown{
+    font-size: 12px;
+}
+.contactMsg .contact textarea{
+    padding: 5px 8px;
+    width: 500px;
+    outline: none;
+    font-weight: 500;
+    font-size: 13px;
+}
+.contactMsg .contactBtn{
+    text-align: right;
+    margin-top: 10px;
+}
+.contactMsg .contactBtn button{
+    border: none;
+    outline: none;
+    padding: 8px 25px;
+    border-left: 3px solid #5b28d3;
+    transition: .3s;
+}
+.contactMsg .contactBtn button:hover{
+    background-color: #736AFF;
+    color: white;
+    transition: .3s;
+}
