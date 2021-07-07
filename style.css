@@ -13,6 +13,12 @@
     background-color: #736AFF;
 }
 
+@media (max-width: 580px) {
+    .sectionContainHeaderandSectionOne{
+        width: 580px;
+    }
+}
+
 /* body */
 body::-webkit-scrollbar{
     width: 0px;
@@ -26,7 +32,11 @@ body::-webkit-scrollbar{
     z-index: 100;
     border-top: 2px solid #736AFF;
 }
+.header1{
+    display: none;
+}
 .header-navBar{
+    position: relative;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -78,6 +88,62 @@ body::-webkit-scrollbar{
 }
 .header-nav-ul li a:hover{
     color: #5b28d3;
+}
+
+@media (max-width:580px){
+    .header-title{
+        position: absolute;
+        font-size: 14px;
+    }
+    .header-nav{
+        display: none;
+    }
+    .header-navBar{
+        height: 35px;
+    }
+    .header1{
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 35px;
+        z-index: 101;
+        bottom: 0;
+        background: linear-gradient(to right, #efefef, #dfdfdf);
+    }
+    .header-nav1{
+        width: 100%;
+        position: absolute;
+        z-index: 10001;
+        height: 100%;
+    }
+    .header-nav-ul1{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+    }
+    .header-nav-ul1 li{
+        padding: 0px 15px;
+    }
+    .header-nav-ul1 li a{
+        text-decoration: none;
+        color: rgba(0,0,0.4);
+        font-size: 11px;
+        text-transform: uppercase;
+    }
+    .header-nav-ul1 li a:hover{
+        color: #5b28d3;
+    }
+    .home a img,
+    .about a img,
+    .edu a img,
+    .skill a img,
+    .info a img{
+        width: 20px;
+        color: #000;
+    }
 }
 
 /* section One */
@@ -144,6 +210,7 @@ body::-webkit-scrollbar{
     padding: 10px 27px;
     text-decoration: none;
     color: #000;
+    transition: .5s;
 }
 .sectionOneBtn button .user{
     font-size: 15px;
@@ -154,11 +221,58 @@ body::-webkit-scrollbar{
     transition: .5s;
 }
 
+@media (max-width: 580px) {
+    .sectionOneContainer{
+        width: 580px;
+    }
+    .sectionOneMyself{
+        line-height: 20px;
+    }
+    .sectionOneMyself h3{
+        font-size: 10px;
+    }
+    .sectionOneMyself h2{
+        font-size: 16px;
+    }
+    .sectionOneMyself h2 span{
+        font-size: 20px;
+    }
+    .sectionOneMyself .animate{
+        font-size: 14px;
+    }
+    .sectionOneMyself p{
+        font-size: 13px;
+    }
+    .sectionOneBtn button{
+        padding: 4px 0px;
+        transition: .5s;
+        margin: 15px 0;
+    }
+    .sectionOneBtn button a{
+        padding: 6.5px 10px;
+        text-decoration: none;
+        color: #000;
+        transition: .5s;
+        font-size: 10px;
+    }
+    .sectionOneBtn button a:active{
+        background-color: #736AFF;
+        color: #ececec;
+    }
+    .sectionOneBtn button a:hover{
+        background-color: #dfdfdf;
+        color: #000;
+    }
+    .sectionOneBtn button .user{
+        font-size: 10px;
+    }
+}
+
+
 /* Section Two */
 #sectionAbout{
     position: relative;
     width: 100%;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -174,6 +288,7 @@ body::-webkit-scrollbar{
 .sectionAboutContainer{
     margin: auto;
     width: 90%;
+    min-height: 100vh;
     line-height: 60px;
     display: flex;
     justify-content: center;
@@ -186,6 +301,71 @@ body::-webkit-scrollbar{
 .sectionAboutDetails span{
     font-size: 20px;
     text-transform: uppercase;
+}
+.resume .downloadBtn{
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    border-left: 2px solid #736AFF;
+    transition: .5s;
+    color: rgba(0,0,0,0.8);
+    margin-right: 15px;
+}
+.resume .downloadBtn a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: .5s;
+}
+.resume .downloadBtn:hover{
+    transform: translateY(8px);
+    transition: .5s;
+}
+.resume .downloadBtn1{
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    border-left: 2px solid #736AFF;
+    transition: .5s;
+    color: rgba(0,0,0,0.8);
+    margin-right: 15px;
+}
+.resume .downloadBtn1 a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: .5s;
+}
+.resume .downloadBtn1:hover{
+    transform: translateX(8px);
+    transition: .5s;
+}
+
+@media (max-width:580px) {
+    #sectionAbout{
+        width: 580px;
+    }
+    .sectionAboutContainer{
+        margin-top: 60px;
+    }
+    .sectionAboutHeader{
+        font-size: 16px;
+    }
+    .sectionAboutDetails label{
+        font-size: 14px;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+    .sectionAboutDetails span{
+        font-size: 15px;
+        text-transform: uppercase;
+    }
+    .downloadBtn,
+    .downloadBtn1{
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+
 }
 
 /* Section Education */
@@ -251,6 +431,23 @@ body::-webkit-scrollbar{
         min-height: 125vh;
     }
 }
+@media (max-width:580px){
+    #sectionEducations{
+        width: 580px;
+    }
+    .sectionEducationsContainer{
+        margin-top: 80px;
+    }
+    .sectionEducationInSchool h3{
+        font-size: 17px;
+    }
+    .sectionEducationInSchoolTxt h4{
+        font-size: 16px;
+    }
+    .sectionEducationInSchoolTxt p{
+        font-size: 14px;
+    }
+}
 
 /* Section Skills */
 
@@ -285,8 +482,14 @@ body::-webkit-scrollbar{
     justify-content: center;
     align-items: center;
 }
-.SkillSets h3{
+.SkillSets h3:nth-child(2){
     margin-left: 50px;
+    color: #5b28d3;
+    transition: .2s;
+}
+.SkillSets h3:nth-child(2):hover{
+    font-size: 24px;
+    transition: .2s;
 }
 .skillSetsLevel{
     width: 80%;
@@ -297,7 +500,7 @@ body::-webkit-scrollbar{
 .skillSetsLevel .rangeBar{
     position: relative;
     width: 50%;
-    background-color: #acacac;
+    background-color: #ececec;
     height: 3px;
 }
 .rangeBar input{
@@ -306,7 +509,7 @@ body::-webkit-scrollbar{
     -webkit-appearance: none;
     height: 100%;
     border-radius: 10%;
-    background-color: #5b28d3;
+    background-color: #262626;
 }
 .skillSetsLevel input::-webkit-slider-thumb{
     -webkit-appearance: none;
@@ -328,6 +531,15 @@ body::-webkit-scrollbar{
     width: 45%;
 }
 
+@media (max-width:580px) {
+    #sectionSkills{
+        width: 580px;
+    }
+    .sectionSkillsContainer{
+        line-height: 50px;
+    }
+}
+
 /* Section Contact */
 
 #sectionContact{
@@ -337,8 +549,10 @@ body::-webkit-scrollbar{
     justify-content: center;
     align-items: center;
     background-color: #262626;
+    overflow: hidden;
 }
 .sectionContactContainer{
+    position: relative;
     margin-top: 50px;
     width: 70%;
     height: 500px;
@@ -348,6 +562,7 @@ body::-webkit-scrollbar{
     align-items: center;
 }
 .contactInfo{
+    position: absolute;
     width: 300px;
     height: 350px;
     background-color: #736AFF;
@@ -380,8 +595,11 @@ body::-webkit-scrollbar{
 }
 
 .contactMsg{
+    position: absolute;
+    left: 50%;
     line-height: 50px;
     width: 450px;
+    transform: translateX(-50%);
 }
 .contactMsg .contact{
     display: flex;
@@ -428,4 +646,62 @@ body::-webkit-scrollbar{
     background-color: #736AFF;
     color: white;
     transition: .3s;
+}
+
+@media (max-width: 1168px){
+    .sectionContactContainer{
+        position: relative;
+        margin-top: 100px;
+        width: 90%;
+        padding: 20px;
+    }
+    .contactInfo{
+        position: absolute;
+        top: -13%;
+        left: 50%;
+        width: 500px;
+        height: 150px;
+        transform: translateX(-50%);
+        padding: 10px 15px;
+    }
+    .contactInfo .phone{
+        margin-left: 40px;
+    }
+    .contactDetails{
+        display: flex;
+        padding: 3px 0;
+    }
+    .contactMsg{
+        position: absolute;
+        line-height: 45px;
+        left: 50%;
+        top: 50%;
+        width: 400px;
+        margin: auto;
+        transform: translate(-50%, -50%);
+        margin-top: 20px;
+    }
+    .contactMsg .contact input{
+        width: 250px;
+        outline: none;
+        font-weight: 400;
+        font-size: 13px;
+    }
+}
+@media (max-width: 580px){
+    #sectionContact{
+        width: 580px;
+    }
+    .contactInfo{
+        position: absolute;
+        top: -13%;
+        left: 50%;
+        width: 430px;
+        height: 150px;
+        transform: translateX(-50%);
+        padding: 10px 15px;
+    }
+    .contactInfo .phone{
+        margin-left: 20px;
+    }
 }
