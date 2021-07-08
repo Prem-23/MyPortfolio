@@ -100,7 +100,7 @@ body::-webkit-scrollbar{
     }
     .header-title{
         position: absolute;
-        font-size: 18px;
+        font-size: 22px;
     }
     .header-nav{
         display: none;
@@ -233,19 +233,19 @@ body::-webkit-scrollbar{
         line-height: 20px;
     }
     .sectionOneMyself h3{
-        font-size: 10px;
-    }
-    .sectionOneMyself h2{
-        font-size: 16px;
-    }
-    .sectionOneMyself h2 span{
-        font-size: 20px;
-    }
-    .sectionOneMyself .animate{
         font-size: 14px;
     }
+    .sectionOneMyself h2{
+        font-size: 19px;
+    }
+    .sectionOneMyself h2 span{
+        font-size: 23px;
+    }
+    .sectionOneMyself .animate{
+        font-size: 17px;
+    }
     .sectionOneMyself p{
-        font-size: 13px;
+        font-size: 16px;
     }
     .sectionOneBtn button{
         padding: 4px 0px;
@@ -257,7 +257,7 @@ body::-webkit-scrollbar{
         text-decoration: none;
         color: #000;
         transition: .5s;
-        font-size: 10px;
+        font-size: 13px;
         font-weight: 600;
     }
     .sectionOneBtn button a:active{
@@ -269,7 +269,7 @@ body::-webkit-scrollbar{
         color: #000;
     }
     .sectionOneBtn button .user{
-        font-size: 10px;
+        font-size: 13px;
     }
 }
 
@@ -354,18 +354,18 @@ body::-webkit-scrollbar{
         margin-top: 60px;
     }
     .sectionAboutDetails label{
-        font-size: 14px;
+        font-size: 19px;
         font-weight: 900;
         text-transform: uppercase;
     }
     .sectionAboutDetails span{
-        font-size: 15px;
+        font-size: 20px;
         text-transform: uppercase;
     }
     .downloadBtn,
     .downloadBtn1{
         padding: 10px 15px;
-        font-size: 12px;
+        font-size: 13px;
     }
 
 }
