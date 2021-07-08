@@ -134,15 +134,12 @@ body::-webkit-scrollbar{
     .header-nav-ul1 li{
         padding: 0px 15px;
     }
-    .header-nav-ul1 li a{
+    /* .header-nav-ul1 li a{
         text-decoration: none;
         color: rgba(0,0,0.4);
         font-size: 11px;
         text-transform: uppercase;
-    }
-    .header-nav-ul1 li a:hover{
-        color: #5b28d3;
-    }
+    } */
     .home a img,
     .about a img,
     .edu a img,
@@ -727,5 +724,8 @@ body::-webkit-scrollbar{
     }
     .contactMsg .contact input{
         width: 220px;
+    }
+    .contactMsg .contactBtn button:active{
+        background-color: #736AFF;
     }
 }
