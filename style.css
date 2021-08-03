@@ -156,12 +156,16 @@ body::-webkit-scrollbar{
     width: 100%;
     min-height: 100vh;
     z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     clip-path: polygon(0 0, 100% 0, 100% 76%, 31% 66%, 0 76%, 0% 50%);
 }
 .sectionOneMyself{
     width: 50%;
     min-height: 85vh;
     margin: auto;
+    margin-top: 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -224,6 +228,27 @@ body::-webkit-scrollbar{
     color: #ececec;
     transition: .5s;
 }
+.sectionOneSocial{
+    display: flex;
+    flex-direction: column;
+    margin-right: 100px;
+    right: 0;
+    z-index: 190;
+}
+.sectionOneSocial i{
+    padding: 50px 0;
+    font-size: 20px;
+    color: #5b28d3;
+    width: 30px;
+    height: 30px;
+    transition: .5s;
+}
+.sectionOneSocial i:nth-child(1):hover,
+.sectionOneSocial i:nth-child(2):hover,
+.sectionOneSocial i:nth-child(3):hover{
+    font-size: 23px;
+    transition: .5s;
+}
 
 @media (max-width: 580px) {
     .sectionOneContainer{
@@ -270,6 +295,9 @@ body::-webkit-scrollbar{
     }
     .sectionOneBtn button .user{
         font-size: 13px;
+    }
+    .sectionOneSocial{
+        display: none;
     }
 }
 
@@ -649,6 +677,9 @@ body::-webkit-scrollbar{
     color: white;
     transition: .3s;
 }
+.sectionOneSocialFooter{
+    display: none;
+}
 
 @media (max-width: 1168px){
     .sectionContactContainer{
@@ -727,5 +758,22 @@ body::-webkit-scrollbar{
     }
     .contactMsg .contactBtn button:active{
         background-color: #736AFF;
+    }
+    .sectionOneSocialFooter{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 580px;
+        height: 70px;
+        background-color: #ececec;
+    }
+    .sectionOneSocialFooter a{
+        font-size: 23px;
+    }
+    .sectionOneSocialFooter a i{
+        color: #262626;
+    }
+    .spacing{
+        margin-bottom: 40px;
     }
 }
